@@ -1,0 +1,43 @@
+# Multi-source configuration for NEPSE Data System
+
+historical:
+  primary:
+    - name: "Nepse-All-Scraper"
+      type: "github_cdn"
+      base_url: "https://cdn.jsdelivr.net/gh/SamirWagle/Nepse-All-Scraper@main/data"
+      company_list: "/company_list.json"
+      ohlc_pattern: "/company-wise/{symbol}/prices.csv"
+      floorsheet_pattern: "/floorsheet/floorsheet_{date}.csv"
+
+  secondary:
+    - name: "Aabishkar2/nepse-data"
+      type: "github"
+      repo: "https://github.com/Aabishkar2/nepse-data"
+      path: "data/company-wise"
+
+    - name: "nepse-open-data"
+      type: "github"
+      repo: "https://github.com/socrateai-official/nepse-open-data"
+
+live:
+  primary:
+    - name: "nepse_data_api"
+      type: "python_library"
+      package: "nepse_data_api"
+
+    - name: "NepseUnofficialApi"
+      type: "python_library"
+      package: "nepse"
+
+  hosted:
+    - name: "surajrimal"
+      base_url: "https://nepseapi.surajrimal.dev"
+
+    - name: "YONEPSE"
+      base_url: "https://shubhamnpk.github.io/yonepse"
+
+licensed:   # Future / Production
+  - name: "npstocks"
+    note: "Official licensed vendor"
+  - name: "MDP / SmartWealthPro"
+    note: "NEPSE licensed data provider"

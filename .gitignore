@@ -1,0 +1,19 @@
+# Large data (clone full repos instead)
+data/floorsheet/*.csv
+data/floorsheet/*.json
+*.zip
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
