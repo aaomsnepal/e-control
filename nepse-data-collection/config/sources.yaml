@@ -1,0 +1,48 @@
+# NEPSE Data Sources Configuration
+
+sources:
+  ohlc:
+    enabled: true
+    url: "https://nepsedata.com/api/ohlc"
+    interval: "daily"
+    symbols:
+      - ADBL
+      - NABIL
+      - SCB
+      - SBI
+      - NICA
+      - PRVU
+      - GBIME
+      - CZBIL
+      - ZBank
+      - JMBANK
+    
+  indices:
+    enabled: true
+    url: "https://nepsedata.com/api/indices"
+    interval: "daily"
+    types:
+      - NEPSE
+      - Subindex
+    
+  floorsheet:
+    enabled: true
+    url: "https://nepsedata.com/api/floorsheet"
+    interval: "realtime"
+    
+  company_list:
+    enabled: true
+    url: "https://nepsedata.com/api/companies"
+    interval: "weekly"
+
+storage:
+  base_path: "./data"
+  formats:
+    - csv
+    - json
+  retention_days: 365
+
+logging:
+  level: "INFO"
+  file: "nepse_collection.log"
+  console: true
