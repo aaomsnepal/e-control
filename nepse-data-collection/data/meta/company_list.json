@@ -1,0 +1,76 @@
+{
+  "companies": [
+    {
+      "symbol": "ADBL",
+      "name": "Aden Bank Limited",
+      "sector": "Banking",
+      "listing_date": "2011-04-29",
+      "market_cap": null
+    },
+    {
+      "symbol": "ALICL",
+      "name": "Allianz Insurance Company Limited",
+      "sector": "Insurance",
+      "listing_date": "2011-04-27",
+      "market_cap": null
+    },
+    {
+      "symbol": "API",
+      "name": "Approval Insurance Limited",
+      "sector": "Insurance",
+      "listing_date": "2011-04-24",
+      "market_cap": null
+    },
+    {
+      "symbol": "ARCL",
+      "name": "Arca Capital Limited",
+      "sector": "Finance",
+      "listing_date": "2013-10-09",
+      "market_cap": null
+    },
+    {
+      "symbol": "BARUN",
+      "name": "Barun Hydropower Company Limited",
+      "sector": "Hydropower",
+      "listing_date": "2017-11-23",
+      "market_cap": null
+    },
+    {
+      "symbol": "BBC",
+      "name": "Bishal Bazar Company Limited",
+      "sector": "Trading",
+      "listing_date": "2013-07-22",
+      "market_cap": null
+    },
+    {
+      "symbol": "BBDC",
+      "name": "Bhrikuti Development Company Limited",
+      "sector": "Others",
+      "listing_date": "2014-10-08",
+      "market_cap": null
+    },
+    {
+      "symbol": "BFC",
+      "name": "Bir Finance Limited",
+      "sector": "Finance",
+      "listing_date": "2012-01-20",
+      "market_cap": null
+    },
+    {
+      "symbol": "BINDHYAC",
+      "name": "Bindyach Bikas Limited",
+      "sector": "Others",
+      "listing_date": "2013-12-26",
+      "market_cap": null
+    },
+    {
+      "symbol": "BNT",
+      "name": "Bank of Nepal Limited",
+      "sector": "Banking",
+      "listing_date": "2019-01-18",
+      "market_cap": null
+    }
+  ],
+  "total_companies": 10,
+  "last_updated": "2024-01-01T00:00:00Z"
+}
