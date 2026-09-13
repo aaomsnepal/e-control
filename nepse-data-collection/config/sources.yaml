@@ -1,0 +1,111 @@
+# NEPSE Data Collection System Configuration
+
+# Data source configuration
+sources:
+  nepse:
+    name: "Nepal Stock Exchange"
+    url: "https://www.nepalstock.com.np"
+    api_base: "https://api.nepalstock.com.np"
+    enabled: true
+    timeout: 30
+
+# Data collection settings
+collection:
+  # OHLC data collection
+  ohlc:
+    enabled: true
+    frequency: "daily"  # daily, hourly, real-time
+    retention_days: 730  # 2 years
+    directory: "data/ohlc"
+    format: "csv"
+
+  # Floor sheet data collection
+  floorsheet:
+    enabled: true
+    frequency: "real-time"
+    retention_days: 90  # 3 months
+    directory: "data/floorsheet"
+    format: "csv"
+    batch_size: 1000
+
+  # Indices collection
+  indices:
+    enabled: true
+    frequency: "daily"
+    retention_days: 1825  # 5 years
+    directory: "data/indices"
+    format: "csv"
+
+  # Company metadata
+  metadata:
+    enabled: true
+    frequency: "weekly"
+    directory: "data/meta"
+    format: "json"
+
+# Database configuration
+database:
+  type: "sqlite"  # sqlite, postgresql, mysql
+  connection:
+    path: "data/nepse.db"  # For SQLite
+    # host: "localhost"  # For PostgreSQL/MySQL
+    # port: 5432
+    # username: "user"
+    # password: "password"
+    # database: "nepse"
+  pool_size: 10
+  echo: false
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  workers: 4
+  cors_origins:
+    - "*"
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "json"  # json, text
+  file: "logs/nepse.log"
+  rotation: "daily"
+  retention_days: 30
+
+# Alerts and Notifications
+alerts:
+  enabled: false
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    from_address: "notifications@example.com"
+  slack:
+    enabled: false
+    webhook_url: ""
+
+# Performance Tuning
+performance:
+  cache:
+    enabled: true
+    ttl_seconds: 300
+    type: "redis"  # redis, memory
+  compression:
+    enabled: true
+    format: "gzip"
+  batch_processing:
+    enabled: true
+    batch_size: 1000
+    workers: 4
+
+# Data Quality
+quality:
+  validation:
+    enabled: true
+    strict_mode: false
+  duplicate_detection: true
+  outlier_detection: true
